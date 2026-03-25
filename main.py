@@ -1,6 +1,7 @@
 from menu.menu import menu_pricipal,limpiar_pantalla
 from funciones.mostrar_catalogo import ver_productos, buscar_producto
 from productos.catalogo import catalogo
+from carrito.agregar_carrito import agrega_producto
 
 
 def main():
@@ -31,7 +32,10 @@ def main():
 
         elif opcion ==3:
             limpiar_pantalla()
-            print("Agregar productos:")
+            print("Agregar productos al carrito:")
+            op1= input("ingrese ID del producto a comprar")
+            op2= input("Ingrese la cantidad")
+            agrega_producto(catalogo,op1,op2)
             input("\nPresiona Enter para volver al menú...")
 
         elif opcion ==4:
