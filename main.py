@@ -5,14 +5,13 @@ from carrito.agregar_carrito import agrega_producto
 
 
 def main():
-    """ carrito = [] """
+    carr_prod=[]
 
     while True:
         limpiar_pantalla()
         opcion=menu_pricipal()
 
-        
-
+    
         if opcion ==1:
       
             limpiar_pantalla()
@@ -33,14 +32,20 @@ def main():
         elif opcion ==3:
             limpiar_pantalla()
             print("Agregar productos al carrito:")
-            op1= input("ingrese ID del producto a comprar")
-            op2= input("Ingrese la cantidad")
-            agrega_producto(catalogo,op1,op2)
+            op1= int(input("ingrese ID del producto a comprar"))
+            op2= int(input("Ingrese la cantidad"))
+            agrega_producto(catalogo,carr_prod,op1,op2)
             input("\nPresiona Enter para volver al menú...")
 
         elif opcion ==4:
             limpiar_pantalla()
             print("Ver carro de compras")
+            
+        
+            print(f"plato: {p["nombre"]} - catidad: {c}")
+            print(f"el total de tu compra es de: {total}")
+
+
             input("\nPresiona Enter para volver al menú...")
 
 

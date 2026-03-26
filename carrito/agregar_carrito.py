@@ -1,10 +1,15 @@
-def agrega_producto(productos: list,id: int,cantidad:int):
-      carr_prod=[]
+def agrega_producto(productos: list,carr_prod,id: int,cantidad:int):
+      
       for i in productos:
-         if id == i["id"]:
-            carr_prod.append({
+         if i["id"]==id:
+            carro={
                 "id": id,
                 "cantidad": cantidad,
-                 })
+                 }
+            carr_prod.append(carro)
    
-      print(carr_prod)        
+      return(carr_prod)   
+
+
+
+               
