@@ -10,7 +10,7 @@ def menu_pricipal():
         print("3- Agregar productos al carro:")
         print("4- Ver carro:")
         print("5- Vaciar carro:")
-        print("6- Salir:")
+        print("0- Salir:")
 
         opcion= int(input("Ingrese una opcion: "))
         return opcion

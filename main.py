@@ -11,7 +11,6 @@ def main():
         limpiar_pantalla()
         opcion=menu_pricipal()
 
-    
         if opcion ==1:
       
             limpiar_pantalla()
@@ -37,7 +36,7 @@ def main():
 
         elif opcion ==4:
             limpiar_pantalla()
-            print("Ver carro de compras")
+            print("Ver carro de compras:")
             
             if not carr_prod:
                 print("El carrito está vacío.")
@@ -53,12 +52,15 @@ def main():
         elif opcion ==5:
             limpiar_pantalla()
             print("------Vaciar el carro de compras------")
-            op3 = input("Escriba SI para vaciar carrito:")
-            vaciar_carrito(carr_prod,op3)
+            if not carr_prod:
+                print("El carrito está vacío.")
+            else:    
+             op3 = input("Escriba SI para vaciar carrito:")
+             vaciar_carrito(carr_prod,op3)
             input("\nPresiona Enter para volver al menú...")
 
 
-        elif opcion ==6:
+        elif opcion ==0:
            break
 
 main()    
